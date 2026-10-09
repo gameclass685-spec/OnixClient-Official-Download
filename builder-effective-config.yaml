@@ -1,0 +1,23 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.onixclient.launcher
+productName: Onix Client
+files:
+  - filter:
+      - '**/*'
+      - '!dist/**'
+      - '!node_modules/.cache/**'
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Onix Client
+electronVersion: 37.10.3
